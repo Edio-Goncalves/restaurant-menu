@@ -89,6 +89,26 @@ const sectionCenter = document.querySelector(".section-center");
 window.addEventListener("DOMContentLoaded", function () {
   diplayMenuItems(menu);
   //   displayMenuButtons();
+  // const categories = menu.reduce(
+  //   function (values, item) {
+  //     if (!values.includes(item.category)) {
+  //       values.push(item.category);
+  //       console.log(values);
+  //     }
+  //     return values;
+  //   },
+  //   ["all"]
+  // );
+  // console.log(categories);
+  const categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
 });
 
 function diplayMenuItems(menuItems) {
